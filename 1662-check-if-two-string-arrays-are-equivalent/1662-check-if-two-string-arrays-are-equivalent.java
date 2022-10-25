@@ -12,5 +12,6 @@ class Solution {
          str2+=s2;
      }
         return str1.equals(str2);
+        // return str1==str2; this is wrong as it is checking the reference of two string objects which is obviously not equal
     }
 }
