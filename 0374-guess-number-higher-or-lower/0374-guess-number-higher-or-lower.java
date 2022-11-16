@@ -18,10 +18,10 @@ public class Solution extends GuessGame {
          }
         else if(guess(mid)==-1){
             high=mid-1;
-            mid=low+(high-low)/2;
+        
         }else{
             low=mid+1;
-            mid=low+(high-low)/2;
+        
         }
         }
     }
