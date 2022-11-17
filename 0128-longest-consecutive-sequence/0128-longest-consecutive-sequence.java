@@ -4,19 +4,19 @@ class Solution {
         for(int num:nums){
             set.add(num);
         }
-        int maxsequencelength=0;
-        for(int i=0; i<nums.length;i++){
-            int currsum=nums[i];
-            int currsumlength=1;
-            if(!set.contains(nums[i]-1)){
-                while(set.contains(currsum+1)){
-                    currsum++;
-                    currsumlength++;
+        int maxlength=0;
+       
+        for(int num1:nums){
+            if(!set.contains(num1-1)){
+                int count=1;
+                while(set.contains(num1+1)){
+                    count++;
+                    num1++;
                 }
+                maxlength= Math.max(count,maxlength);
+                      
             }
-            maxsequencelength= Math.max(currsumlength,maxsequencelength);
         }
-        
-        return maxsequencelength;
+        return maxlength;
     }
 }
